@@ -1,14 +1,12 @@
 // These variable hold the numbers we want to do operations on and the name of the operation we want to perform.
 // They are expected to change so we use the "let" keyword.
-let inputNum = null
+let firstNum = null
 let secondNum = null
 let operation = null
 
 // this function takes in the number you type in the input field and saves it to the "firstNum" variable
-const saveInputNumber = (num) => {
-  inputNum = parseInt(num) 
-  console.log("inputNum: ", inputNum)
-  putInputInElement(inputNum)
+const saveFirstNumber = (num) => {
+  firstNum = parseInt(num)  
 }
 
 // this function takes in the number you type in the 2nd input field and saves it to the "secondNum" variable
@@ -56,12 +54,6 @@ const changeOperation = (chosenOperation) => {
   operation = chosenOperation
   // Use your Chrome Inspector Tool > Console Tab to see the "operation" that's logged
   console.log(operation)
-}
-
-// Show last input number
-const putInputInElement = (inputNum) => {
-  // access the DOM by writing "document" then use the method "getElementById" and pass it the id, "input".
-  document.getElementById("input").innerHTML += inputNum
 }
 
 // In order to show the user their results we have to access the DOM and stick in the value
